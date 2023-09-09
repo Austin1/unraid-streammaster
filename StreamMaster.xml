@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>StreamMaster</Name>
+  <Repository>senexcrenshaw/streammaster:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/senexcrenshaw/streammaster/general</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/zACbUp6XvW</Support>
+  <Project>https://github.com/SenexCrenshaw/StreamMaster/</Project>
+  <Overview>StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs. </Overview>
+  <Category>MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/SenexCrenshaw/StreamMaster/blob/main/WikiImages/StreamMasterx240.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1694226227</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Host Port for HTTPS" Target="7096" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7096</Config>
+  <Config Name="Host Port for HTTP" Target="7095" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7095</Config>
+  <Config Name="Host Path 1" Target="/root/.streammaster" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster</Config>
+  <Config Name="Host Path 2" Target="/root/.streammaster/tv-logos" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster/tv-logos</Config>
+</Container>
