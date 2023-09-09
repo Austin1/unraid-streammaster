@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://discord.gg/zACbUp6XvW</Support>
+  <Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
   <Project>https://github.com/SenexCrenshaw/StreamMaster/</Project>
   <Overview>StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs. </Overview>
   <Category>MediaApp:Other</Category>
@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1694226227</DateInstalled>
+  <DateInstalled>1694226345</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
