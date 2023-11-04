@@ -23,6 +23,6 @@
   <Requires/>
   <Config Name="Host Port for HTTPS" Target="7096" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7096</Config>
   <Config Name="Host Port for HTTP" Target="7095" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7095</Config>
-  <Config Name="Host Path 1" Target="/root/.streammaster" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster</Config>
-  <Config Name="Host Path 2" Target="/root/.streammaster/tv-logos" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster/tv-logos</Config>
+  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster</Config>
+  <Config Name="Host Path 2" Target="/config/tv-logos" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster/tv-logos</Config>
 </Container>
