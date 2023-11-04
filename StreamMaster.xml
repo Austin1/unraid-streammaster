@@ -18,8 +18,8 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1694227334</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you find this project useful please STAR it on GitHub and become a Patreon</DonateText>
+  <DonateLink>https://www.patreon.com/user?u=52683080</DonateLink>
   <Requires/>
   <Config Name="Host Port for HTTPS" Target="7096" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7096</Config>
   <Config Name="Host Port for HTTP" Target="7095" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7095</Config>
