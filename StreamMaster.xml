@@ -1,28 +1,61 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>StreamMaster</Name>
-  <Repository>senexcrenshaw/streammaster:latest</Repository>
-  <Registry>https://hub.docker.com/repository/docker/senexcrenshaw/streammaster/general</Registry>
-  <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
-  <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
-  <Project>https://github.com/SenexCrenshaw/StreamMaster/</Project>
-  <Overview>StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs. </Overview>
+  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-streammaster/main/StreamMaster.xml</TemplateURL>
+  <Beta>True</Beta>
   <Category>MediaApp:Other</Category>
+  <Name>StreamMaster</Name>
+  <Overview>StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs. </Overview>
+<Description>
+  [b]Description[/b][br]
+  StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs.[br][br]
+  [b]Configuration[/b][br]
+  [b]/config[/b] This is where the application will store its configuration files, database, logs, etc
+  [b]TV Logos[/b] This is where you can store optional additional TV Logos to be processed on startup. A popular method is to clone https://github.com/tv-logo/tv-logos and place in this location. Streammaster will create logos based on the file path, EX: countries\albania\abc-al.png will be named 'countries-albania-abc-al'
+</Description>
+<Repository>senexcrenshaw/streammaster:latest</Repository>
+<Registry>https://hub.docker.com/repository/docker/senexcrenshaw/streammaster/general</Registry>
+<Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
+<Project>https://github.com/SenexCrenshaw/StreamMaster/</Project>
+<Privileged>false</Privileged>
+<Networking>
+  <Mode>bridge</Mode>
+  <Publish>
+    <Port>
+      <HostPort>7095</HostPort>
+      <ContainerPort>7095</ContainerPort>
+      <Protocol>tcp</Protocol>
+    </Port>
+    <Port>
+      <HostPort>7096</HostPort>
+      <ContainerPort>7096</ContainerPort>
+      <Protocol>tcp</Protocol>
+    </Port>
+  </Publish>
+</Networking>
+ <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/config/streammaster</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/streammaster/tv-logos</HostDir>
+      <ContainerDir>/config/tv-logos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <WebUI>http://[IP]:[PORT:7095]/</WebUI>
-  <TemplateURL/>
   <Icon>https://github.com/SenexCrenshaw/StreamMaster/blob/main/WikiImages/StreamMasterx240.png?raw=true</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1694227334</DateInstalled>
-  <DonateText>If you find this project useful please STAR it on GitHub and become a Patreon</DonateText>
+  <DonateText>If you find this project useful please STAR it on GitHub and become a Patreon of the project! We need funding to keep it going!</DonateText>
   <DonateLink>https://www.patreon.com/user?u=52683080</DonateLink>
-  <Requires/>
-  <Config Name="Host Port for HTTPS" Target="7096" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7096</Config>
-  <Config Name="Host Port for HTTP" Target="7095" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7095</Config>
-  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster</Config>
-  <Config Name="Host Path 2" Target="/config/tv-logos" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/streammaster/tv-logos</Config>
 </Container>
