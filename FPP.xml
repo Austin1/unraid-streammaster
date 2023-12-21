@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-streammaster/main/FPP.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>MediaApp:Other</Category>
+  <Name>FPP - Falcon Player</Name>
+  <Overview>The Falcon Player (FPP) is a lightweight, optimized, feature-rich sequence player designed to run on low-cost Single Board Computers (SBC). It was originally created to run on the $35 Raspberry Pi, hence the middle 'P' in the short name but now the FPP supports many more systems. It is still mostly commonly used on a Raspberry Pi (Zero, 2, 3, 4) or a Beagle Bone (Black, Green, Pocket). The FPP shorthand is still used but it is now just called Falcon Player.
+
+FPP aims to be controller agnostic, it can talk E1.31, DDP, DMX, Pixelnet, and Renard to hardware from multiple hardware vendors. Using various capes, FPP can also be a controller on P5 and P10 Matrixes, or strings of ws2811 pixels. </Overview>
+<Description>
+  [b]Description[/b][br]
+  The Falcon Player (FPP) is a lightweight, optimized, feature-rich sequence player designed to run on low-cost Single Board Computers (SBC). It was originally created to run on the $35 Raspberry Pi, hence the middle 'P' in the short name but now the FPP supports many more systems. It is still mostly commonly used on a Raspberry Pi (Zero, 2, 3, 4) or a Beagle Bone (Black, Green, Pocket). The FPP shorthand is still used but it is now just called Falcon Player.
+
+FPP aims to be controller agnostic, it can talk E1.31, DDP, DMX, Pixelnet, and Renard to hardware from multiple hardware vendors. Using various capes, FPP can also be a controller on P5 and P10 Matrixes, or strings of ws2811 pixels.
+<Repository>falconchristmas/fpp:latest</Repository>
+<Registry>https://hub.docker.com/r/falconchristmas/fpp/</Registry>
+<Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
+<Project>https://github.com/FalconChristmas/fpp</Project>
+<Privileged>false</Privileged>
+<Networking>
+  <Mode>bridge</Mode>
+  <Publish>
+    <Port>
+      <HostPort>7080</HostPort>
+      <ContainerPort>80</ContainerPort>
+      <Protocol>tcp</Protocol>
+    </Port>
+  </Publish>
+</Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/config/fpp</HostDir>
+      <ContainerDir>/home/fpp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:7080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/FalconChristmas/fpp/master/www/webfonts/fpp-icons/src/fpp-logo.svg</Icon>
+  <DonateText>Buy your pixel controllers from us!</DonateText>
+  <DonateLink>https://pixelcontroller.com/store/</DonateLink>
+</Container>
