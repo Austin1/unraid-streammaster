@@ -35,7 +35,7 @@ FPP aims to be controller agnostic, it can talk E1.31, DDP, DMX, Pixelnet, and R
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:7080]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Icon>https://raw.githubusercontent.com/FalconChristmas/fpp/master/www/webfonts/fpp-icons/src/fpp-logo.svg</Icon>
   <DonateText>Buy your pixel controllers from us!</DonateText>
   <DonateLink>https://pixelcontroller.com/store/</DonateLink>
