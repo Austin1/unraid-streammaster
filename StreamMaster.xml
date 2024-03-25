@@ -44,12 +44,12 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/config/streammaster</HostDir>
+      <HostDir>/mnt/user/appdata/StreamMaster</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/streammaster/tv-logos</HostDir>
+      <HostDir>/mnt/user/appdata/StreamMaster/tv-logos</HostDir>
       <ContainerDir>/config/tv-logos</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
