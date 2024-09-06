@@ -12,7 +12,7 @@
   [b]/config[/b] This is where the application will store its configuration files, database, logs, etc
   [b]TV Logos[/b] This is where you can store optional additional TV Logos to be processed on startup. A popular method is to clone https://github.com/tv-logo/tv-logos and place in this location. Streammaster will create logos based on the file path, EX: countries\albania\abc-al.png will be named 'countries-albania-abc-al'
 </Description>
-<Repository>senexcrenshaw/streammaster:latest</Repository>
+<Repository>senexcrenshaw/streammaster:channels</Repository>
 <Registry>https://hub.docker.com/repository/docker/senexcrenshaw/streammaster/general</Registry>
 <Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
 <Project>https://github.com/SenexCrenshaw/StreamMaster/</Project>
