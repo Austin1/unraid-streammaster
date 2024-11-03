@@ -38,10 +38,6 @@
       <Name>POSTGRES_USER</Name>
       <Value>sm</Value>
     </Variable>
-    <Variable>
-      <Name>POSTGRES_PASSWORD</Name>
-      <Value>sm123</Value>
-    </Variable>
   </Environment>
   <Data>
     <Volume>
