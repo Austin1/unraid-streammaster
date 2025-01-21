@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>aIPTV</Name>
+  <Repository>xtinct101/aiptv:latest</Repository>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Grab the latest stable release</TagDescription>
+</Branch>
+<Branch>
+    <Tag>latest-development</Tag>
+    <TagDescription>Grab the latest development build</TagDescription>
+</Branch>
+  <Registry>https://hub.docker.com/r/xtinct101/aiptv</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <ReadMe>https://discord.gg/PdCVWvuc</ReadMe>
+  <Support>https://discord.gg/PdCVWvuc</Support>
+  <Project>https://discord.gg/PdCVWvuc</Project>
+  <Discord>https://discord.gg/gFz7EtHhG2</Discord>
+  <Overview>aIPTV is an IPTV proxy application that enables users to curate complex M3U playlists, manage them, and proxy them to various applications like Emby, Plex, Jellyfin, or any other compatible streaming platform. It offers the flexibility to import an unlimited number of M3U and EPG files, supporting a wide range of streaming content. aIPTV delivers fast and reliable streaming across multiple operating systems. Additional features, such as robust proxying and support for multiple clients on a single backend stream, make it a comprehensive solution for today’s streaming needs.</Overview>
+  <Category>MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:5002]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-ca-repo/refs/heads/master/aIPTV.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Austin1/unraid-ca-repo/refs/heads/main/aiptv_logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1736996015</DateInstalled>
+  <DonateText>Please become a Patreon of the project! We need funding to keep it going!</DonateText>
+  <DonateLink>https://www.patreon.com/MrM0nday/membership</DonateLink>
+  <Requires/>
+  <Config Name="Host Port 1" Target="5002" Default="5002" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5002</Config>
+  <Config Name="AppData Config Path" Target="/aiptv/data" Default="/mnt/user/appdata/aIPTV" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/StreamMaster</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <ExtraSearchTerms>iptv xteve threadfin tvheadend telly streammaster</ExtraSearchTerms>
+  <TailscaleStateDir/>
+</Container>
