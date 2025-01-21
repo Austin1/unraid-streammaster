@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-streammaster/main/FPP.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-ca-repo/refs/heads/main/FPP.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>MediaApp:Other</Category>
   <Name>FPP - Falcon Player</Name>
