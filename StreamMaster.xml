@@ -1,58 +1,35 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-streammaster/main/StreamMaster.xml</TemplateURL>
-  <Beta>True</Beta>
-  <Category>MediaApp:Other</Category>
   <Name>StreamMaster</Name>
-  <Overview>StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs. </Overview>
-<Description>
-  [b]Description[/b][br]
-  StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs.[br][br]
-  [b]Configuration[/b][br]
-  [b]/config[/b] This is where the application will store its configuration files, database, logs, etc
-  [b]TV Logos[/b] This is where you can store optional additional TV Logos to be processed on startup. A popular method is to clone https://github.com/tv-logo/tv-logos and place in this location. Streammaster will create logos based on the file path, EX: countries\albania\abc-al.png will be named 'countries-albania-abc-al'
-</Description>
-<Repository>senexcrenshaw/streammaster:latest</Repository>
-<Registry>https://hub.docker.com/repository/docker/senexcrenshaw/streammaster/general</Registry>
-<Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
-<Project>https://github.com/SenexCrenshaw/StreamMaster/</Project>
-<Discord>https://discord.gg/zACbUp6XvW</Discord>
-<Privileged>false</Privileged>
-<Networking>
-  <Mode>bridge</Mode>
-  <Publish>
-    <Port>
-      <HostPort>7095</HostPort>
-      <ContainerPort>7095</ContainerPort>
-      <Protocol>tcp</Protocol>
-    </Port>
-    <Port>
-      <HostPort>7096</HostPort>
-      <ContainerPort>7096</ContainerPort>
-      <Protocol>tcp</Protocol>
-    </Port>
-  </Publish>
-</Networking>
- <Environment>
-    <Variable>
-      <Name>POSTGRES_USER</Name>
-      <Value>sm</Value>
-    </Variable>
-  </Environment>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/StreamMaster</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/StreamMaster/tv-logos</HostDir>
-      <ContainerDir>/config/tv-logos</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
+  <Repository>senexcrenshaw/streammaster:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/senexcrenshaw/streammaster/general</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <ReadMe>https://senexcrenshaw.github.io/StreamMaster/GettingStarted/</ReadMe>
+  <Support>https://forums.unraid.net/topic/144857-support-streammaster/</Support>
+  <Project>https://senexcrenshaw.github.io/StreamMaster/</Project>
+  <Discord>https://discord.gg/gFz7EtHhG2</Discord>
+  <Overview>StreamMaster is a versatile streaming application that allows users to import an unlimited number of M3U and EPG files for a wide range of streaming content. The platform offers robust analytics tools for tracking performance and gaining insights, as well as customizable logos for a unique user experience. It also features seamless integration with popular streaming platforms like Plex and Emby. Built on the latest React and C# core technologies, StreamMaster ensures fast and reliable streaming across various operating systems. Additional features like robust proxying and the ability to have multiple clients on a single backend stream make it a comprehensive solution for today's streaming needs.</Overview>
+  <Category>MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:7095]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Austin1/unraid-streammaster/master/StreamMaster.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/SenexCrenshaw/StreamMaster/refs/heads/main/streammasterwebui/public/images/streammaster_logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1736996015</DateInstalled>
   <DonateText>If you find this project useful please STAR it on GitHub and become a Patreon of the project! We need funding to keep it going!</DonateText>
   <DonateLink>https://www.patreon.com/user?u=52683080</DonateLink>
+  <Requires/>
+  <Config Name="Host Port 1" Target="7095" Default="7095" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7095</Config>
+  <Config Name="Host Port 2" Target="7096" Default="7096" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7096</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/StreamMaster" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/StreamMaster</Config>
+  <Config Name="TV Logos Path" Target="/config/tv-logos" Default="/mnt/user/appdata/StreamMaster/tv-logos" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/StreamMaster/tv-logos</Config>
+  <Config Name="PostgresUser" Target="POSTGRES_USER" Default="sm" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">sm</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <ExtraSearchTerms>iptv xteve threadfin tvheadend telly</ExtraSearchTerms>
+  <TailscaleStateDir/>
 </Container>
