@@ -31,8 +31,9 @@
   <DonateText>Please become a Patreon of the project! We need funding to keep it going!</DonateText>
   <DonateLink>https://www.patreon.com/MrM0nday/membership</DonateLink>
   <Requires/>
-  <Config Name="Host Port 1" Target="5002" Default="5002" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5002</Config>
-  <Config Name="AppData Config Path" Target="/aiptv/data" Default="/mnt/user/appdata/aIPTV" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/StreamMaster</Config>
+  <Config Name="HTTP Port" Target="5002" Default="5002" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5002</Config>
+  <Config Name="AppData Config Path" Target="/aiptv/data" Default="/mnt/user/appdata/aIPTV" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/aiptv</Config>
+  <Config Name="PORT" Target="PORT" Default="5002" Mode="" Description="Environment variable to change port on container side" Type="Variable" Display="always" Required="false" Mask="false">5002</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <ExtraSearchTerms>iptv xteve threadfin tvheadend telly streammaster</ExtraSearchTerms>
