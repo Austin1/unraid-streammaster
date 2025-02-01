@@ -7,7 +7,7 @@
     <TagDescription>Grab the latest stable release</TagDescription>
 </Branch>
 <Branch>
-    <Tag>latest-development</Tag>
+    <Tag>development-latest</Tag>
     <TagDescription>Grab the latest development build</TagDescription>
 </Branch>
   <Registry>https://hub.docker.com/r/xtinct101/aiptv</Registry>
